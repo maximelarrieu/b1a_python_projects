@@ -1,14 +1,10 @@
-#!usr/bin/python3
+#!/usr/bin/python3
 
 def convert(md):
-    h1 = '#'
-    h2 = '##'
-    h3 = '###'
-    if h1 == '#':
-        md.replace('#', '<h1>')
-    if h2 == '##':
+    index = 0
+    for index in md:
+        md.replace("#", '<h1>')
         md.replace('##', '<h2>')
-    if h3 == '###':
         md.replace('###', '<h3>')
 
 

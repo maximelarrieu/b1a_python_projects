@@ -1,15 +1,20 @@
 #!/usr/bin/python3
 
 import argparse
+import os
 
 parser = argparse.ArgumentParser()
-parser.add_argument("-i", "--idirectory", help="sources files folder (contains markdown files)", action="store_true")
-parser.add_argument("-o", "--output-directory", help="final folder where files will be generated", action="store_true")
-parser.add_argument("-t", "--template-directory", help="folder containing web models to complete", action="store_true")
+input_directory = '--input-directory'
+output_directory = '--output-directory'
+template_directory = '--template-directory'
+
+parser.add_argument("-i", input_directory, help="sources files folder (contains markdown files)", action="store_true")
+parser.add_argument("-o", output_directory, help="final folder where files will be generated", action="store_true")
+parser.add_argument("-t", template_directory, help="folder containing web models to complete", action="store_true")
 args = parser.parse_args()
-if args.idirectory:
+if args.input_directory:
     print("input-directory")
-if args.output-directory:
+if args.output_directory:
     print("output-directory")
-if args.template-directory:
+if args.template_directory:
     print("template-directory")
