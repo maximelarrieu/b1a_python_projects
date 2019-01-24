@@ -2,6 +2,7 @@
 
 import argparse
 import os
+import shutil
 
 parser = argparse.ArgumentParser()
 input_directory = '--input-directory'
@@ -15,6 +16,7 @@ args = parser.parse_args()
 if args.input_directory:
     print("input-directory")
 if args.output_directory:
+    shutil.copy('markedown_files/*.md', 'html_files/test.html')
     print("output-directory")
 if args.template_directory:
     print("template-directory")

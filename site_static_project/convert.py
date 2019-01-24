@@ -1,18 +1,9 @@
 #!usr/bin/python3
 
-def convert(md):
-    h1 = '#'
-    h2 = '##'
-    h3 = '###'
-    if h1 == '#':
-        md.replace('#', '<h1>')
-    if h2 == '##':
-        md.replace('##', '<h2>')
-    if h3 == '###':
-        md.replace('###', '<h3>')
-
-
-md_file = open("README.md", "r")
+md_file = open("markedown_files/test.md", "r")
 md = md_file.read()
-html = convert(md)
-print(html)
+print(md)
+
+print(md.replace('#', '<h1>'))
+print(md.replace('##', '<h2>'))
+print(md.replace('###', '<h3>'))
