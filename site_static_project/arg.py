@@ -15,7 +15,7 @@ parser.add_argument("-o", output_directory, help="final folder where files will 
 parser.add_argument("-t", template_directory, help="folder containing web models to complete", action="store_true")
 args = parser.parse_args()
 
-if args.args.input != None:
+if args.input != None:
     pathmd = args.input_directory
     pathmd = pathmd + '/'
     print("input-directory")
